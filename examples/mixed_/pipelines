@@ -1,0 +1,45 @@
+1.Mixed two audio signals.
+
+gst-launch-1.0 uridecodebin uri=file:///home/ ! adder name = m ! autoaudiosink uridecodebin uri=file:///home/ ! audioconvert ! m.
+
+
+
+gst-launch-1.0 filesrc  uri=file:///home/ ! decodebin ! adder name = m ! autoaudiosink  filesrc uri=file:///home/ ! decodebin ! audioconvert ! m.
+
+
+
+
+
+gst-launch-1.0 filesrc  location=/home/kakanhar/Videos/ ! decodebin ! adder name=m m. ! videoconvert ! xvimagesink  filesrc location=/home/kakanhar/Videos/ ! decodebin ! videoconvert ! m.
+
+video mixer:
+
+gst-launch-1.0 filesrc location=/home/valajkal/Videos/video/gandhi.mp4 ! decodebin ! videomixer name=add add. ! videoconvert ! autovideosink filesrc location=/home/valajkal/Videos/video/4k.mp4 ! decodebin ! videoconvert ! add.
+
+
+
+video mixer and audio
+gst-launch-1.0 filesrc location=/home/valajkal/Videos/video/gandhi.mp4 ! decodebin name=dee dee. ! videoconvert ! autovideosink dee. ! adder name=add add. ! audioconvert ! alsasink filesrc location=/home/valajkal/Videos/audio/sample.mp3 ! decodebin ! audioconvert ! add.
+
+improved:
+ gst-launch-1.0 filesrc location=~/Videos/small.mp4 ! decodebin name=dee dee. ! videoconvert ! autovideosink dee. ! audioresample ! adder name=add add. ! audioconvert ! audioresample ! audio/x-raw,rate=8000 ! alsasink filesrc location=~/Videos/audio/Music.mp3 ! decodebin ! audioconvert ! add.
+
+
+http://gstreamer-devel.966125.n4.nabble.com/Add-or-remove-elements-to-from-a-tee-dynamically-td4675008.html
+
+
+ADDER:
+SINK template: 'sink_%u'
+    Availability: On request
+      Has request_new_pad() 
+TEE:
+	 SRC template: 'src_%u'
+    Availability: On request
+      Has request_new_pad() function:
+
+
+
+  tee_audio_pad = gst_element_get_request_pad (tee, "src_%u");
+  queue_audio_pad = gst_element_get_static_pad (audio_queue, "sink");
+
+

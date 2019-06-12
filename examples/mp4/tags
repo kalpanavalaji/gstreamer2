@@ -1,0 +1,41 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Aconverter	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+Adecoder	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+Are_sam	audio_video.c	/^    GstElement *Are_sam;$/;"	m	struct:_CustomData	file:
+Are_sam	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+Asink	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+CustomData	audio_video.c	/^    } CustomData;$/;"	t	typeref:struct:_CustomData	file:
+Vconverter	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+Vdecoder	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+Vsink	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+_CustomData	audio_video.c	/^typedef struct _CustomData {$/;"	s	file:
+audio_convert	audio_video.c	/^    GstElement *audio_convert;$/;"	m	struct:_CustomData	file:
+audio_decoder	audio_video.c	/^    GstElement *audio_decoder;$/;"	m	struct:_CustomData	file:
+audio_sink	audio_video.c	/^    GstElement *audio_sink;$/;"	m	struct:_CustomData	file:
+audioqueue	audio_video.c	/^    GstElement *audioqueue;$/;"	m	struct:_CustomData	file:
+audioqueue	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+bus_call	audio_video.c	/^static gboolean bus_call (GstBus  *bus , GstMessage *msg , gpointer  data)$/;"	f	file:
+bus_call	video.c	/^static gboolean bus_call (GstBus  *bus , GstMessage *msg , gpointer  data)$/;"	f	file:
+bus_call	video_audieo.c	/^static gboolean bus_call (GstBus  *bus , GstMessage *msg , gpointer  data)$/;"	f	file:
+demux	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+demuxer	audio_video.c	/^    GstElement *demuxer;$/;"	m	struct:_CustomData	file:
+main	audio_video.c	/^int main(int argc ,char *argv[])$/;"	f
+main	video.c	/^int main(int argc ,char *argv[])$/;"	f
+main	video_audieo.c	/^int main(int argc ,char *argv[])$/;"	f
+on_pad_added	audio_video.c	/^static void on_pad_added (GstElement *element,  GstPad  *pad, gpointer data)$/;"	f	file:
+on_pad_added	video.c	/^static void on_pad_added (GstElement *element,  GstPad  *pad, gpointer data)$/;"	f	file:
+on_pad_added	video_audieo.c	/^void on_pad_added (GstElement *element, GstPad *pad) $/;"	f
+pipeline	audio_video.c	/^    GstElement *pipeline;$/;"	m	struct:_CustomData	file:
+pipeline	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+source	audio_video.c	/^    GstElement *source;$/;"	m	struct:_CustomData	file:
+source	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v
+video_convert	audio_video.c	/^    GstElement *video_convert;$/;"	m	struct:_CustomData	file:
+video_decoder	audio_video.c	/^    GstElement *video_decoder;$/;"	m	struct:_CustomData	file:
+video_sink	audio_video.c	/^    GstElement *video_sink;$/;"	m	struct:_CustomData	file:
+videoqueue	audio_video.c	/^    GstElement *videoqueue;$/;"	m	struct:_CustomData	file:
+videoqueue	video_audieo.c	/^GstElement *pipeline,*source,*demux,*Adecoder,*Aconverter,*Asink,*Vdecoder,*Vconverter,*Vsink,*audioqueue,*videoqueue,*Are_sam;$/;"	v

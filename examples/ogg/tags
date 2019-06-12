@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CustomData	video_Audio.c	/^    } CustomData;$/;"	t	typeref:struct:_CustomData	file:
+_CustomData	video_Audio.c	/^    typedef struct _CustomData {$/;"	s	file:
+audio_convert	video_Audio.c	/^    GstElement *audio_convert;$/;"	m	struct:_CustomData	file:
+audio_decoder	video_Audio.c	/^    GstElement *audio_decoder;$/;"	m	struct:_CustomData	file:
+audio_sink	video_Audio.c	/^    GstElement *audio_sink;$/;"	m	struct:_CustomData	file:
+audioqueue	video_Audio.c	/^    GstElement *audioqueue;$/;"	m	struct:_CustomData	file:
+demuxer	video_Audio.c	/^    GstElement *demuxer;$/;"	m	struct:_CustomData	file:
+main	video_Audio.c	/^    int main(int argc, char *argv[]) {$/;"	f
+pad_added_handler	video_Audio.c	/^ static void pad_added_handler (GstElement *src, GstPad *new_pad, CustomData *data)$/;"	f	file:
+pipeline	video_Audio.c	/^    GstElement *pipeline;$/;"	m	struct:_CustomData	file:
+source	video_Audio.c	/^    GstElement *source;$/;"	m	struct:_CustomData	file:
+video_convert	video_Audio.c	/^    GstElement *video_convert;$/;"	m	struct:_CustomData	file:
+video_decoder	video_Audio.c	/^    GstElement *video_decoder;$/;"	m	struct:_CustomData	file:
+video_sink	video_Audio.c	/^    GstElement *video_sink;$/;"	m	struct:_CustomData	file:
+videoqueue	video_Audio.c	/^    GstElement *videoqueue;$/;"	m	struct:_CustomData	file:

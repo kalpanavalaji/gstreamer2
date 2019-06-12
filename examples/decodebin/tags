@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+audio	decodebin.c	/^GstElement *pipeline, *audio;$/;"	v
+audio	decodebin2.c	/^GstElement *pipeline, *audio;$/;"	v
+audiopad	decodebin.c	/^GstPad *audiopad;\/\/.$/;"	v
+bus_call	dec.c	/^static gboolean bus_call (GstBus  *bus , GstMessage *msg , gpointer  data)$/;"	f	file:
+bus_call	decodebin_pad_added.c	/^static gboolean bus_call (GstBus  *bus , GstMessage *msg , gpointer  data)$/;"	f	file:
+bus_call	decodebin_pad_added_both.c	/^bus_call (GstBus     *bus,$/;"	f	file:
+cb_newpad	decodebin.c	/^static void cb_newpad (GstElement *decodebin ,GstPad *pad,gboolean last, gpointer data)$/;"	f	file:
+cb_newpad	decodebin2.c	/^cb_newpad (GstElement *decodebin,$/;"	f	file:
+main	dec.c	/^int main (int   argc,char *argv[])$/;"	f
+main	decodebin.c	/^gint main (gint   argc, gchar *argv[])$/;"	f
+main	decodebin2.c	/^main (gint   argc,$/;"	f
+main	decodebin_pad_added.c	/^int main (int   argc,char *argv[])$/;"	f
+main	decodebin_pad_added_both.c	/^int main (int   argc,char *argv[])$/;"	f
+my_bus_callback	decodebin.c	/^my_bus_callback (GstBus     *bus,$/;"	f	file:
+my_bus_callback	decodebin2.c	/^my_bus_callback (GstBus     *bus,$/;"	f	file:
+on_pad_added	dec.c	/^static void on_pad_added (GstElement *element,  GstPad  *pad, gpointer data)$/;"	f	file:
+on_pad_added	decodebin_pad_added.c	/^static void on_pad_added (GstElement *element,  GstPad  *pad, gpointer data)$/;"	f	file:
+on_pad_added	decodebin_pad_added_both.c	/^static void on_pad_added (GstElement *element,  GstPad  *pad, gpointer data)$/;"	f	file:
+pipeline	decodebin.c	/^GstElement *pipeline, *audio;$/;"	v
+pipeline	decodebin2.c	/^GstElement *pipeline, *audio;$/;"	v

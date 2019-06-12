@@ -1,0 +1,2465 @@
+cscope 15 $HOME/h1/gstreamer-master/tests/examples/decodebin               0000013975
+	@dec.c
+
+1 
+	~<g¡/g¡.h
+>
+
+2 
+	~<glib.h
+>
+
+5 
+gboŞ—n
+ 
+	$bus_ÿÎ
+ (
+G¡Bus
+ *
+bus
+ , 
+G¡Mes§ge
+ *
+msg
+ , 
+gpoš‹r
+ 
+d©a
+)
+
+7 
+GMašLoİ
+ *
+loİ
+ = (GMašLoİ *è
+d©a
+;
+
+8 
+i
+=1;
+
+9 
+	`g_´št
+("bu ÿÎ i %d::\n",
+i
+++);
+
+10 
+	`GST_MESSAGE_TYPE
+ (
+msg
+)) {
+
+12 
+GST_MESSAGE_EOS
+:
+
+13 
+	`g_´št
+ ("End of stream\n");
+
+14 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+17 
+GST_MESSAGE_ERROR
+: {
+
+18 
+gch¬
+ *
+debug
+;
+
+19 
+GE¼Ü
+ *
+”rÜ
+;
+
+21 
+	`g¡_mes§ge_·r£_”rÜ
+ (
+msg
+, &
+”rÜ
+, &
+debug
+);
+
+22 
+	`g_ä“
+ (
+debug
+);
+
+24 
+	`g_´š‹¼
+ ("E¼Ü: %s\n", 
+”rÜ
+->
+mes§ge
+);
+
+25 
+	`g_”rÜ_ä“
+ (
+”rÜ
+);
+
+27 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+34  
+TRUE
+;
+
+35 
+	}
+}
+
+38 
+	$Ú_·d_added
+ (
+G¡EËm’t
+ *
+–em’t
+, 
+G¡Pad
+ *
+·d
+, 
+gpoš‹r
+ 
+d©a
+)
+
+40 
+G¡Pad
+ *
+sšk·d
+;
+
+41 
+G¡EËm’t
+ *
+decod”
+ = (G¡EËm’ˆ*è
+d©a
+;
+
+44 
+	`g_´št
+ ("Dynamic…ad created,†inking decoder//converter\n");
+
+46 
+sšk·d
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+decod”
+, "sink");
+
+48 
+	`g¡_·d_lšk
+ (
+·d
+, 
+sšk·d
+);
+
+50 
+	`g¡_objeù_uÄef
+ (
+sšk·d
+);
+
+51 
+	}
+}
+
+55 
+	$maš
+ (
+¬gc
+,*
+¬gv
+[])
+
+57 
+j
+=1;
+
+58 
+GMašLoİ
+ *
+loİ
+;
+
+60 
+G¡EËm’t
+ *
+p–še
+, *
+sourû
+, *
+decod”
+, *
+cÚv
+, *
+sšk
+;
+
+61 
+G¡Bus
+ *
+bus
+;
+
+62 
+gušt
+ 
+bus_w©ch_id
+;
+
+65 
+	`g¡_š™
+ (&
+¬gc
+, &
+¬gv
+);
+
+67 
+loİ
+ = 
+	`g_maš_loİ_Ãw
+ (
+NULL
+, 
+FALSE
+);
+
+72 ià(
+¬gc
+ != 2)
+
+74 
+	`g_´š‹¼
+ ("U§ge: % <Ogg/VÜbi f’ame>\n", 
+¬gv
+[0]);
+
+80 
+p–še
+ = 
+	`g¡_p–še_Ãw
+ ("video-player");
+
+81 
+sourû
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("filesrc", "file-source");
+
+82 
+decod”
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("decodebin", "decoder");
+
+83 
+cÚv
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("videoconvert", "converter");
+
+84 
+sšk
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("autovideosink", "sink");
+
+86 iàĞ!
+p–še
+ || !
+sourû
+ || !
+decod”
+ || !
+cÚv
+ || !
+sšk
+)
+
+88 
+	`g_´š‹¼
+ ("Oneƒlement could‚ot be created. Exiting.\n");
+
+95 
+	`g_objeù_£t
+ (
+	`G_OBJECT
+ (
+sourû
+), "loÿtiÚ", 
+¬gv
+[1], 
+NULL
+);
+
+105 
+bus
+ = 
+	`g¡_p–še_g‘_bus
+ (
+	`GST_PIPELINE
+ (
+p–še
+));
+
+106 
+bus_w©ch_id
+ = 
+	`g¡_bus_add_w©ch
+ (
+bus
+, 
+bus_ÿÎ
+, 
+loİ
+);
+
+107 
+	`g¡_objeù_uÄef
+ (
+bus
+);
+
+112 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+p–še
+),
+sourû
+, 
+decod”
+, 
+cÚv
+, 
+sšk
+, 
+NULL
+);
+
+116 
+	`g¡_–em’t_lšk
+ (
+sourû
+, 
+decod”
+);
+
+117 
+	`g¡_–em’t_lšk_mªy
+ (
+cÚv
+, 
+sšk
+, 
+NULL
+);
+
+127 
+	`g_´št
+ ("Now…Ïyšg: %s\n", 
+¬gv
+[1]);
+
+128 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_PLAYING
+);
+
+133 
+	`g_´št
+ ("Running...\n");
+
+134 
+	`g_maš_loİ_run
+ (
+loİ
+);
+
+141 
+	`g_´št
+ ("Returned, stopping…layback\n");
+
+142 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_NULL
+);
+
+144 
+	`g_´št
+ ("Deleting…ipeline\n");
+
+145 
+	`g¡_objeù_uÄef
+ (
+	`GST_OBJECT
+ (
+p–še
+));
+
+146 
+	`g_sourû_»move
+ (
+bus_w©ch_id
+);
+
+147 
+	`g_maš_loİ_uÄef
+ (
+loİ
+);
+
+150 
+	}
+}
+
+	@decodebin.c
+
+2 
+	~<g¡/g¡.h
+>
+
+3 
+	~<glib.h
+>
+
+5 
+G¡Pad
+ *
+	gaudiİad
+;
+
+7 
+gboŞ—n
+
+
+8 
+	$my_bus_ÿÎback
+ (
+G¡Bus
+ *
+bus
+,
+
+9 
+G¡Mes§ge
+ *
+mes§ge
+,
+
+10 
+gpoš‹r
+ 
+d©a
+)
+
+12 
+GMašLoİ
+ *
+loİ
+ = 
+d©a
+;
+
+14 
+	`GST_MESSAGE_TYPE
+ (
+mes§ge
+)) {
+
+15 
+GST_MESSAGE_ERROR
+: {
+
+16 
+GE¼Ü
+ *
+”r
+;
+
+17 
+gch¬
+ *
+debug
+;
+
+19 
+	`g¡_mes§ge_·r£_”rÜ
+ (
+mes§ge
+, &
+”r
+, &
+debug
+);
+
+20 
+	`g_´št
+ ("E¼Ü: %s\n", 
+”r
+->
+mes§ge
+);
+
+21 
+	`g_”rÜ_ä“
+ (
+”r
+);
+
+22 
+	`g_ä“
+ (
+debug
+);
+
+24 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+27 
+GST_MESSAGE_EOS
+:
+
+29 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+37  
+TRUE
+;
+
+38 
+	}
+}
+
+41 
+G¡EËm’t
+ *
+	gp–še
+, *
+	gaudio
+;
+
+43 
+	$cb_Ãw·d
+ (
+G¡EËm’t
+ *
+decodebš
+ ,
+G¡Pad
+ *
+·d
+,
+gboŞ—n
+ 
+Ï¡
+, 
+gpoš‹r
+ 
+d©a
+)
+
+45 
+G¡C­s
+ *
+ÿps
+;
+
+46 
+G¡SŒuùu»
+ *
+¡r
+;
+
+50 
+audiİad
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+audio
+, "sink");
+
+51 ià(
+	`GST_PAD_IS_LINKED
+ (
+audiİad
+)) {
+
+52 
+	`g_objeù_uÄef
+ (
+audiİad
+);
+
+57 
+ÿps
+ = 
+	`g¡_·d_g‘_ÿps
+ (
+·d
+);
+
+58 
+¡r
+ = 
+	`g¡_ÿps_g‘_¡ruùu»
+ (
+ÿps
+, 0);
+
+59 ià(!
+	`g_¡¼¡r
+ (
+	`g¡_¡ruùu»_g‘_Çme
+ (
+¡r
+), "audio")) {
+
+60 
+	`g¡_ÿps_uÄef
+ (
+ÿps
+);
+
+61 
+	`g¡_objeù_uÄef
+ (
+audiİad
+);
+
+64 
+	`g¡_ÿps_uÄef
+ (
+ÿps
+);
+
+67 
+	`g¡_·d_lšk
+ (
+·d
+, 
+audiİad
+);
+
+69 
+	`g_objeù_uÄef
+ (
+audiİad
+);
+
+70 
+	}
+}
+
+72 
+gšt
+ 
+	$maš
+ (
+gšt
+ 
+¬gc
+, 
+gch¬
+ *
+¬gv
+[])
+
+74 
+GMašLoİ
+ *
+loİ
+;
+
+75 
+G¡EËm’t
+ *
+¤c
+, *
+dec
+, *
+cÚv
+, *
+sšk
+;
+
+77 
+G¡Bus
+ *
+bus
+;
+
+80 
+	`g¡_š™
+ (&
+¬gc
+, &
+¬gv
+);
+
+81 
+loİ
+ = 
+	`g_maš_loİ_Ãw
+ (
+NULL
+, 
+FALSE
+);
+
+84 ià(
+¬gc
+ != 2) {
+
+85 
+	`g_´št
+ ("U§ge: % <f’ame>\n", 
+¬gv
+[0]);
+
+90 
+p–še
+ = 
+	`g¡_p–še_Ãw
+ ("pipeline");
+
+92 
+bus
+ = 
+	`g¡_p–še_g‘_bus
+ (
+	`GST_PIPELINE
+ (
+p–še
+));
+
+93 
+	`g¡_bus_add_w©ch
+ (
+bus
+, 
+my_bus_ÿÎback
+, 
+loİ
+);
+
+94 
+	`g¡_objeù_uÄef
+ (
+bus
+);
+
+96 
+¤c
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("filesrc", "source");
+
+97 
+	`g_objeù_£t
+ (
+	`G_OBJECT
+ (
+¤c
+), "loÿtiÚ", 
+¬gv
+[1], 
+NULL
+);
+
+98 
+dec
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("decodebin", "decoder");
+
+99 
+	`g_sigÇl_cÚÃù
+ (
+dec
+,"Ãw-decoded-·d" , 
+	`G_CALLBACK
+ (
+cb_Ãw·d
+), 
+NULL
+);
+
+101 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+p–še
+), 
+¤c
+, 
+dec
+, 
+NULL
+);
+
+102 
+	`g¡_–em’t_lšk
+ (
+¤c
+, 
+dec
+);
+
+105 
+audio
+ = 
+	`g¡_bš_Ãw
+ ("audiobin");
+
+106 
+cÚv
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("videoconvert", "aconv");
+
+107 
+audiİad
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+cÚv
+, "sink");
+
+108 
+sšk
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("autovideosink", "sink");
+
+109 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+audio
+), 
+cÚv
+, 
+sšk
+, 
+NULL
+);
+
+110 
+	`g¡_–em’t_lšk
+ (
+cÚv
+, 
+sšk
+);
+
+111 
+	`g¡_–em’t_add_·d
+ (
+audio
+,
+
+112 
+	`g¡_gho¡_·d_Ãw
+ ("sšk", 
+audiİad
+));
+
+113 
+	`g¡_objeù_uÄef
+ (
+audiİad
+);
+
+114 
+	`g¡_bš_add
+ (
+	`GST_BIN
+ (
+p–še
+), 
+audio
+);
+
+117 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_PLAYING
+);
+
+118 
+	`g_maš_loİ_run
+ (
+loİ
+);
+
+121 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_NULL
+);
+
+122 
+	`g¡_objeù_uÄef
+ (
+	`GST_OBJECT
+ (
+p–še
+));
+
+125 
+	}
+}
+
+	@decodebin2.c
+
+2 
+	~<g¡/g¡.h
+>
+
+5 
+gboŞ—n
+
+
+6 
+	$my_bus_ÿÎback
+ (
+G¡Bus
+ *
+bus
+,
+
+7 
+G¡Mes§ge
+ *
+mes§ge
+,
+
+8 
+gpoš‹r
+ 
+d©a
+)
+
+10 
+GMašLoİ
+ *
+loİ
+ = 
+d©a
+;
+
+12 
+	`GST_MESSAGE_TYPE
+ (
+mes§ge
+)) {
+
+13 
+GST_MESSAGE_ERROR
+: {
+
+14 
+GE¼Ü
+ *
+”r
+;
+
+15 
+gch¬
+ *
+debug
+;
+
+17 
+	`g¡_mes§ge_·r£_”rÜ
+ (
+mes§ge
+, &
+”r
+, &
+debug
+);
+
+18 
+	`g_´št
+ ("E¼Ü: %s\n", 
+”r
+->
+mes§ge
+);
+
+19 
+	`g_”rÜ_ä“
+ (
+”r
+);
+
+20 
+	`g_ä“
+ (
+debug
+);
+
+22 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+25 
+GST_MESSAGE_EOS
+:
+
+27 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+35  
+TRUE
+;
+
+36 
+	}
+}
+
+39 
+G¡EËm’t
+ *
+	gp–še
+, *
+	gaudio
+;
+
+42 
+	$cb_Ãw·d
+ (
+G¡EËm’t
+ *
+decodebš
+,
+
+43 
+G¡Pad
+ *
+·d
+,
+
+44 
+gboŞ—n
+ 
+Ï¡
+,
+
+45 
+gpoš‹r
+ 
+d©a
+)
+
+47 
+G¡C­s
+ *
+ÿps
+;
+
+48 
+G¡SŒuùu»
+ *
+¡r
+;
+
+49 
+G¡Pad
+ *
+audiİad
+;
+
+52 
+audiİad
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+audio
+, "sink");
+
+53 ià(
+	`GST_PAD_IS_LINKED
+ (
+audiİad
+)) {
+
+54 
+	`g_objeù_uÄef
+ (
+audiİad
+);
+
+59 
+ÿps
+ = 
+	`g¡_·d_g‘_ÿps
+ (
+·d
+);
+
+60 
+¡r
+ = 
+	`g¡_ÿps_g‘_¡ruùu»
+ (
+ÿps
+, 0);
+
+61 ià(!
+	`g_¡¼¡r
+ (
+	`g¡_¡ruùu»_g‘_Çme
+ (
+¡r
+), "audio")) {
+
+62 
+	`g¡_ÿps_uÄef
+ (
+ÿps
+);
+
+63 
+	`g¡_objeù_uÄef
+ (
+audiİad
+);
+
+66 
+	`g¡_ÿps_uÄef
+ (
+ÿps
+);
+
+69 
+	`g¡_·d_lšk
+ (
+·d
+, 
+audiİad
+);
+
+71 
+	`g_objeù_uÄef
+ (
+audiİad
+);
+
+72 
+	}
+}
+
+74 
+gšt
+
+
+75 
+	$maš
+ (
+gšt
+ 
+¬gc
+,
+
+76 
+gch¬
+ *
+¬gv
+[])
+
+78 
+GMašLoİ
+ *
+loİ
+;
+
+79 
+G¡EËm’t
+ *
+¤c
+, *
+dec
+, *
+cÚv
+, *
+sšk
+;
+
+80 
+G¡Pad
+ *
+audiİad
+;
+
+81 
+G¡Bus
+ *
+bus
+;
+
+84 
+	`g¡_š™
+ (&
+¬gc
+, &
+¬gv
+);
+
+85 
+loİ
+ = 
+	`g_maš_loİ_Ãw
+ (
+NULL
+, 
+FALSE
+);
+
+88 ià(
+¬gc
+ != 2) {
+
+89 
+	`g_´št
+ ("U§ge: % <f’ame>\n", 
+¬gv
+[0]);
+
+94 
+p–še
+ = 
+	`g¡_p–še_Ãw
+ ("pipeline");
+
+96 
+bus
+ = 
+	`g¡_p–še_g‘_bus
+ (
+	`GST_PIPELINE
+ (
+p–še
+));
+
+97 
+	`g¡_bus_add_w©ch
+ (
+bus
+, 
+my_bus_ÿÎback
+, 
+loİ
+);
+
+98 
+	`g¡_objeù_uÄef
+ (
+bus
+);
+
+100 
+¤c
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("filesrc", "source");
+
+101 
+	`g_objeù_£t
+ (
+	`G_OBJECT
+ (
+¤c
+), "loÿtiÚ", 
+¬gv
+[1], 
+NULL
+);
+
+102 
+dec
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("decodebin", "decoder");
+
+103 
+	`g_sigÇl_cÚÃù
+ (
+dec
+, "Ãw-decoded-·d", 
+	`G_CALLBACK
+ (
+cb_Ãw·d
+), 
+NULL
+);
+
+104 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+p–še
+), 
+¤c
+, 
+dec
+, 
+NULL
+);
+
+105 
+	`g¡_–em’t_lšk
+ (
+¤c
+, 
+dec
+);
+
+108 
+audio
+ = 
+	`g¡_bš_Ãw
+ ("audiobin");
+
+109 
+cÚv
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("audioconvert", "aconv");
+
+110 
+audiİad
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+cÚv
+, "sink");
+
+111 
+sšk
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("alsasink", "sink");
+
+112 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+audio
+), 
+cÚv
+, 
+sšk
+, 
+NULL
+);
+
+113 
+	`g¡_–em’t_lšk
+ (
+cÚv
+, 
+sšk
+);
+
+114 
+	`g¡_–em’t_add_·d
+ (
+audio
+,
+
+115 
+	`g¡_gho¡_·d_Ãw
+ ("sšk", 
+audiİad
+));
+
+116 
+	`g¡_objeù_uÄef
+ (
+audiİad
+);
+
+117 
+	`g¡_bš_add
+ (
+	`GST_BIN
+ (
+p–še
+), 
+audio
+);
+
+120 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_PLAYING
+);
+
+121 
+	`g_maš_loİ_run
+ (
+loİ
+);
+
+124 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_NULL
+);
+
+125 
+	`g¡_objeù_uÄef
+ (
+	`GST_OBJECT
+ (
+p–še
+));
+
+128 
+	}
+}
+
+	@decodebin_pad_added.c
+
+1 
+	~<g¡/g¡.h
+>
+
+2 
+	~<glib.h
+>
+
+5 
+gboŞ—n
+ 
+	$bus_ÿÎ
+ (
+G¡Bus
+ *
+bus
+ , 
+G¡Mes§ge
+ *
+msg
+ , 
+gpoš‹r
+ 
+d©a
+)
+
+7 
+GMašLoİ
+ *
+loİ
+ = (GMašLoİ *è
+d©a
+;
+
+8 
+i
+=1;
+
+9 
+	`g_´št
+("bu ÿÎ i %d::\n",
+i
+++);
+
+10 
+	`GST_MESSAGE_TYPE
+ (
+msg
+)) {
+
+12 
+GST_MESSAGE_EOS
+:
+
+13 
+	`g_´št
+ ("End of stream\n");
+
+14 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+17 
+GST_MESSAGE_ERROR
+: {
+
+18 
+gch¬
+ *
+debug
+;
+
+19 
+GE¼Ü
+ *
+”rÜ
+;
+
+21 
+	`g¡_mes§ge_·r£_”rÜ
+ (
+msg
+, &
+”rÜ
+, &
+debug
+);
+
+22 
+	`g_ä“
+ (
+debug
+);
+
+24 
+	`g_´š‹¼
+ ("E¼Ü: %s\n", 
+”rÜ
+->
+mes§ge
+);
+
+25 
+	`g_”rÜ_ä“
+ (
+”rÜ
+);
+
+27 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+34  
+TRUE
+;
+
+35 
+	}
+}
+
+38 
+	$Ú_·d_added
+ (
+G¡EËm’t
+ *
+–em’t
+, 
+G¡Pad
+ *
+·d
+, 
+gpoš‹r
+ 
+d©a
+)
+
+40 
+G¡Pad
+ *
+sšk·d
+;
+
+41 
+G¡EËm’t
+ *
+decod”
+ = (G¡EËm’ˆ*è
+d©a
+;
+
+44 
+	`g_´št
+ ("Dynamic…ad created,†inking decoder//converter\n");
+
+46 
+sšk·d
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+decod”
+, "sink");
+
+48 
+	`g¡_·d_lšk
+ (
+·d
+, 
+sšk·d
+);
+
+50 
+	`g¡_objeù_uÄef
+ (
+sšk·d
+);
+
+51 
+	}
+}
+
+55 
+	$maš
+ (
+¬gc
+,*
+¬gv
+[])
+
+57 
+j
+=1;
+
+58 
+GMašLoİ
+ *
+loİ
+;
+
+60 
+G¡EËm’t
+ *
+p–še
+, *
+sourû
+, *
+decod”
+, *
+cÚv
+, *
+sšk
+;
+
+61 
+G¡Bus
+ *
+bus
+;
+
+62 
+gušt
+ 
+bus_w©ch_id
+;
+
+65 
+	`g¡_š™
+ (&
+¬gc
+, &
+¬gv
+);
+
+67 
+loİ
+ = 
+	`g_maš_loİ_Ãw
+ (
+NULL
+, 
+FALSE
+);
+
+72 ià(
+¬gc
+ != 2)
+
+74 
+	`g_´š‹¼
+ ("U§ge: % <Ogg/VÜbi f’ame>\n", 
+¬gv
+[0]);
+
+80 
+p–še
+ = 
+	`g¡_p–še_Ãw
+ ("video-player");
+
+81 
+sourû
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("filesrc", "file-source");
+
+82 
+decod”
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("decodebinn", "decoder");
+
+83 
+cÚv
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("videoconvert", "converter");
+
+84 
+sšk
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("autovideosink", "NULL");
+
+86 ià(!
+p–še
+ || !
+sourû
+ || !
+decod”
+ || !
+cÚv
+ || !
+sšk
+)
+
+88 
+	`g_´š‹¼
+ ("Oneƒlement could‚ot be created. Exiting.\n");
+
+95 
+	`g_objeù_£t
+ (
+	`G_OBJECT
+ (
+sourû
+), "loÿtiÚ", 
+¬gv
+[1], 
+NULL
+);
+
+105 
+bus
+ = 
+	`g¡_p–še_g‘_bus
+ (
+	`GST_PIPELINE
+ (
+p–še
+));
+
+106 
+bus_w©ch_id
+ = 
+	`g¡_bus_add_w©ch
+ (
+bus
+, 
+bus_ÿÎ
+, 
+loİ
+);
+
+107 
+	`g¡_objeù_uÄef
+ (
+bus
+);
+
+112 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+p–še
+),
+sourû
+, 
+decod”
+, 
+cÚv
+, 
+sšk
+, 
+NULL
+);
+
+116 
+	`g¡_–em’t_lšk
+ (
+sourû
+, 
+decod”
+);
+
+117 
+	`g¡_–em’t_lšk_mªy
+ (
+cÚv
+, 
+sšk
+, 
+NULL
+);
+
+118 
+	`g_sigÇl_cÚÃù
+ (
+decod”
+, "·d-added", 
+	`G_CALLBACK
+ (
+Ú_·d_added
+), 
+cÚv
+);
+
+127 
+	`g_´št
+ ("Now…Ïyšg: %s\n", 
+¬gv
+[1]);
+
+128 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_PLAYING
+);
+
+133 
+	`g_´št
+ ("Running...\n");
+
+134 
+	`g_maš_loİ_run
+ (
+loİ
+);
+
+141 
+	`g_´št
+ ("Returned, stopping…layback\n");
+
+142 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_NULL
+);
+
+144 
+	`g_´št
+ ("Deleting…ipeline\n");
+
+145 
+	`g¡_objeù_uÄef
+ (
+	`GST_OBJECT
+ (
+p–še
+));
+
+146 
+	`g_sourû_»move
+ (
+bus_w©ch_id
+);
+
+147 
+	`g_maš_loİ_uÄef
+ (
+loİ
+);
+
+150 
+	}
+}
+
+	@decodebin_pad_added_both.c
+
+1 
+	~<g¡/g¡.h
+>
+
+2 
+	~<glib.h
+>
+
+5 
+gboŞ—n
+
+
+6 
+	$bus_ÿÎ
+ (
+G¡Bus
+ *
+bus
+,
+
+7 
+G¡Mes§ge
+ *
+msg
+,
+
+8 
+gpoš‹r
+ 
+d©a
+)
+
+10 
+GMašLoİ
+ *
+loİ
+ = (GMašLoİ *è
+d©a
+;
+
+12 
+	`GST_MESSAGE_TYPE
+ (
+msg
+)) {
+
+14 
+GST_MESSAGE_EOS
+:
+
+15 
+	`g_´št
+ ("End of stream\n");
+
+16 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+19 
+GST_MESSAGE_ERROR
+: {
+
+20 
+gch¬
+ *
+debug
+;
+
+21 
+GE¼Ü
+ *
+”rÜ
+;
+
+23 
+	`g¡_mes§ge_·r£_”rÜ
+ (
+msg
+, &
+”rÜ
+, &
+debug
+);
+
+24 
+	`g_ä“
+ (
+debug
+);
+
+26 
+	`g_´š‹¼
+ ("E¼Ü: %s\n", 
+”rÜ
+->
+mes§ge
+);
+
+27 
+	`g_”rÜ_ä“
+ (
+”rÜ
+);
+
+29 
+	`g_maš_loİ_qu™
+ (
+loİ
+);
+
+36  
+TRUE
+;
+
+37 
+	}
+}
+
+40 
+	$Ú_·d_added
+ (
+G¡EËm’t
+ *
+–em’t
+, 
+G¡Pad
+ *
+·d
+, 
+gpoš‹r
+ 
+d©a
+)
+
+42 
+G¡Pad
+ *
+sšk·d
+;
+
+43 
+G¡EËm’t
+ *
+decod”
+ = (G¡EËm’ˆ*è
+d©a
+;
+
+46 
+	`g_´št
+ ("Dynamic…ad created,†inking decoder//converter\n");
+
+48 
+sšk·d
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+decod”
+, "sink");
+
+50 
+	`g¡_·d_lšk
+ (
+·d
+, 
+sšk·d
+);
+
+52 
+	`g¡_objeù_uÄef
+ (
+sšk·d
+);
+
+53 
+	}
+}
+
+57 
+	$maš
+ (
+¬gc
+,*
+¬gv
+[])
+
+59 
+a
+=0;
+
+60 
+GMašLoİ
+ *
+loİ
+;
+
+62 
+G¡EËm’t
+ *
+p–še
+, *
+sourû
+, *
+decod”
+, *
+VcÚv
+, *
+Vsšk
+,*
+A»_§
+,*
+AcÚv
+,*
+Asšk
+;
+
+63 
+G¡Bus
+ *
+bus
+;
+
+64 
+gušt
+ 
+bus_w©ch_id
+;
+
+67 
+	`g¡_š™
+ (&
+¬gc
+, &
+¬gv
+);
+
+69 
+loİ
+ = 
+	`g_maš_loİ_Ãw
+ (
+NULL
+, 
+FALSE
+);
+
+74 ià(
+¬gc
+ != 2)
+
+76 
+	`g_´š‹¼
+ ("U§ge: %  f’ame>\n", 
+¬gv
+[0]);
+
+82 
+p–še
+ = 
+	`g¡_p–še_Ãw
+ ("video-audio-player");
+
+83 
+sourû
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("filesrc", "file-source");
+
+85 
+decod”
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("decodebin", "decoderr");
+
+87 
+VcÚv
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("videoconvert", "Vconverter");
+
+88 
+Vsšk
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("autovideosink", "Video-output");
+
+91 
+AcÚv
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("audioconvert", "Aconverter");
+
+92 
+A»_§
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("audioresample", "Are_sample");
+
+93 
+Asšk
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("autoaudiosink", "Audio-output");
+
+96 ià(!
+p–še
+ || !
+sourû
+ || !
+decod”
+ || !
+VcÚv
+ || !
+Vsšk
+ || !
+A»_§
+ || !
+AcÚv
+ || !
+Asšk
+)
+
+98 
+	`g_´š‹¼
+ ("Oneƒlement could‚ot be created. Exiting.\n");
+
+105 
+	`g_objeù_£t
+ (
+	`G_OBJECT
+ (
+sourû
+), "loÿtiÚ", 
+¬gv
+[1], 
+NULL
+);
+
+108 
+bus
+ = 
+	`g¡_p–še_g‘_bus
+ (
+	`GST_PIPELINE
+ (
+p–še
+));
+
+109 
+bus_w©ch_id
+ = 
+	`g¡_bus_add_w©ch
+ (
+bus
+, 
+bus_ÿÎ
+, 
+loİ
+);
+
+110 
+	`g¡_objeù_uÄef
+ (
+bus
+);
+
+114 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+p–še
+),
+sourû
+, 
+decod”
+, 
+VcÚv
+, 
+Vsšk
+, 
+AcÚv
+ , 
+Asšk
+, 
+A»_§
+, 
+NULL
+);
+
+118 
+	`g¡_–em’t_lšk
+ (
+sourû
+, 
+decod”
+);
+
+119 
+	`g¡_–em’t_lšk_mªy
+ (
+VcÚv
+, 
+Vsšk
+, 
+NULL
+);
+
+120 
+	`g¡_–em’t_lšk_mªy
+ (
+AcÚv
+,
+A»_§
+, 
+Asšk
+, 
+NULL
+);
+
+121 
+	`g_sigÇl_cÚÃù
+ (
+decod”
+, "·d-added", 
+	`G_CALLBACK
+ (
+Ú_·d_added
+), 
+VcÚv
+);
+
+122 if(
+a
+){
+
+123 
+	`g_sigÇl_cÚÃù
+ (
+decod”
+, "·d-added", 
+	`G_CALLBACK
+ (
+Ú_·d_added
+), 
+AcÚv
+);
+
+124 
+a
+=1;
+
+133 
+	`g_´št
+ ("Now…Ïyšg: %s\n", 
+¬gv
+[1]);
+
+134 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_PLAYING
+);
+
+138 
+	`g_´št
+ ("Running...\n");
+
+139 
+	`g_maš_loİ_run
+ (
+loİ
+);
+
+144 
+	`g_´št
+ ("Returned, stopping…layback\n");
+
+145 
+	`g¡_–em’t_£t_¡©e
+ (
+p–še
+, 
+GST_STATE_NULL
+);
+
+147 
+	`g_´št
+ ("Deleting…ipeline\n");
+
+148 
+	`g¡_objeù_uÄef
+ (
+	`GST_OBJECT
+ (
+p–še
+));
+
+149 
+	`g_sourû_»move
+ (
+bus_w©ch_id
+);
+
+150 
+	`g_maš_loİ_uÄef
+ (
+loİ
+);
+
+153 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+5
+80
+dec.c
+decodebin.c
+decodebin2.c
+decodebin_pad_added.c
+decodebin_pad_added_both.c

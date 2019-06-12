@@ -1,0 +1,873 @@
+cscope 15 $HOME/h1/gstreamer-master/tests/examples/ogg               0000005917
+	@video_Audio.c
+
+1 
+	~<g¡/g¡.h
+>
+
+2 
+	~<glib.h
+>
+
+3 
+	s_Cu¡omD©a
+ {
+
+4 
+G¡EËm’t
+ *
+	mp–še
+;
+
+5 
+G¡EËm’t
+ *
+	msourû
+;
+
+6 
+G¡EËm’t
+ *
+	mdemux”
+;
+
+7 
+G¡EËm’t
+ *
+	maudioqueue
+;
+
+8 
+G¡EËm’t
+ *
+	mvideoqueue
+;
+
+9 
+G¡EËm’t
+ *
+	maudio_decod”
+;
+
+10 
+G¡EËm’t
+ *
+	mvideo_decod”
+;
+
+11 
+G¡EËm’t
+ *
+	mvideo_cÚv”t
+;
+
+12 
+G¡EËm’t
+ *
+	maudio_cÚv”t
+;
+
+13 
+G¡EËm’t
+ *
+	mvideo_sšk
+;
+
+14 
+G¡EËm’t
+ *
+	maudio_sšk
+;
+
+15 } 
+	tCu¡omD©a
+;
+
+18 
+·d_added_hªdËr
+ (
+G¡EËm’t
+ *
+¤c
+, 
+G¡Pad
+ *
+·d
+, 
+Cu¡omD©a
+ *
+d©a
+);
+
+20 
+	$maš
+(
+¬gc
+, *
+¬gv
+[]) {
+
+21 
+Cu¡omD©a
+ 
+d©a
+;
+
+22 
+G¡Bus
+ *
+bus
+;
+
+23 
+G¡Mes§ge
+ *
+msg
+;
+
+24 
+G¡S‹ChªgeR‘uº
+ 
+»t
+;
+
+25 
+gboÞ—n
+ 
+‹rmš©e
+ = 
+FALSE
+;
+
+27 
+	`g¡_š™
+ (&
+¬gc
+, &
+¬gv
+);
+
+29 
+d©a
+.
+sourû
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("filesrc", "source");
+
+30 
+d©a
+.
+demux”
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("oggdemux", "demuxer");
+
+31 
+d©a
+.
+audioqueue
+ = 
+	`g¡_–em’t_çùÜy_make
+("queue","audioqueue");
+
+32 
+d©a
+.
+videoqueue
+ = 
+	`g¡_–em’t_çùÜy_make
+("queue","videoqueue");
+
+33 
+d©a
+.
+audio_decod”
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("vorbisdec", "audio_decoder");
+
+34 
+d©a
+.
+audio_cÚv”t
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("audioconvert", "audio_convert");
+
+35 
+d©a
+.
+audio_sšk
+ = 
+	`g¡_–em’t_çùÜy_make
+ ("autoaudiosink", "audio_sink");
+
+36 
+d©a
+.
+video_decod”
+ = 
+	`g¡_–em’t_çùÜy_make
+("theoradec","video_decoder");
+
+37 
+d©a
+.
+video_cÚv”t
+ = 
+	`g¡_–em’t_çùÜy_make
+("autovideoconvert","video_convert");
+
+38 
+d©a
+.
+video_sšk
+ = 
+	`g¡_–em’t_çùÜy_make
+("autovideosink","video_sink");
+
+40 
+d©a
+.
+p–še
+ = 
+	`g¡_p–še_Ãw
+ ("test-pipeline");
+
+41 ià(!
+d©a
+.
+p–še
+ || !d©a.
+sourû
+ || !d©a.
+demux”
+ || !d©a.
+audioqueue
+ ||!d©a.
+audio_decod”
+ ||!d©a.
+audio_cÚv”t
+ ||
+
+42 !
+d©a
+.
+audio_sšk
+ || !d©a.
+videoqueue
+ || !d©a.
+video_decod”
+ || !d©a.
+video_cÚv”t
+ || !d©a.
+video_sšk
+) {
+
+43 
+	`g_´š‹¼
+ ("Not‡llƒlements could be created.\n");
+
+47 
+	`g¡_bš_add_mªy
+ (
+	`GST_BIN
+ (
+d©a
+.
+p–še
+), d©a.
+sourû
+,d©a.
+demux”
+,d©a.
+audioqueue
+,d©a.
+audio_decod”
+,d©a.
+audio_cÚv”t
+,d©a.
+audio_sšk
+,d©a.
+videoqueue
+,d©a.
+video_decod”
+,d©a.
+video_cÚv”t
+,d©a.
+video_sšk
+, 
+NULL
+);
+
+49 ià(!
+	`g¡_–em’t_lšk
+(
+d©a
+.
+sourû
+,d©a.
+demux”
+)) {
+
+50 
+	`g_´š‹¼
+ ("Elements could‚ot be†inked.\n");
+
+51 
+	`g¡_objeù_uÄef
+ (
+d©a
+.
+p–še
+);
+
+55 ià(!
+	`g¡_–em’t_lšk_mªy
+ (
+d©a
+.
+audioqueue
+,d©a.
+audio_decod”
+,d©a.
+audio_cÚv”t
+, d©a.
+audio_sšk
+,
+NULL
+)) {
+
+56 
+	`g_´š‹¼
+ ("‡udio Elements could‚ot be†inked.\n");
+
+57 
+	`g¡_objeù_uÄef
+ (
+d©a
+.
+p–še
+);
+
+60 ià(!
+	`g¡_–em’t_lšk_mªy
+(
+d©a
+.
+videoqueue
+,d©a.
+video_decod”
+,d©a.
+video_cÚv”t
+, d©a.
+video_sšk
+,
+NULL
+)) {
+
+61 
+	`g_´š‹¼
+("video Elements could‚ot be†inked.\n");
+
+62 
+	`g¡_objeù_uÄef
+(
+d©a
+.
+p–še
+);
+
+66 
+	`g_objeù_£t
+ (
+d©a
+.
+sourû
+, "loÿtiÚ", 
+¬gv
+[1], 
+NULL
+);
+
+68 
+	`g_sigÇl_cÚÃù
+ (
+d©a
+.
+demux”
+, "·d-added", 
+	`G_CALLBACK
+ (
+·d_added_hªdËr
+), &data);
+
+70 
+»t
+ = 
+	`g¡_–em’t_£t_¡©e
+ (
+d©a
+.
+p–še
+, 
+GST_STATE_PLAYING
+);
+
+71 ià(
+»t
+ =ð
+GST_STATE_CHANGE_FAILURE
+) {
+
+72 
+	`g_´š‹¼
+ ("Unableo sethe…ipelineohe…laying state.\n");
+
+73 
+	`g¡_objeù_uÄef
+ (
+d©a
+.
+p–še
+);
+
+77 
+bus
+ = 
+	`g¡_–em’t_g‘_bus
+ (
+d©a
+.
+p–še
+);
+
+79 
+msg
+ = 
+	`g¡_bus_timed_pÝ_fž‹»d
+ (
+bus
+, 
+GST_CLOCK_TIME_NONE
+,
+
+80 
+GST_MESSAGE_STATE_CHANGED
+ | 
+GST_MESSAGE_ERROR
+ | 
+GST_MESSAGE_EOS
+);
+
+82 ià(
+msg
+ !ð
+NULL
+) {
+
+83 
+GE¼Ü
+ *
+”r
+;
+
+84 
+gch¬
+ *
+debug_šfo
+;
+
+85 
+	`GST_MESSAGE_TYPE
+ (
+msg
+)) {
+
+86 
+GST_MESSAGE_ERROR
+:
+
+87 
+	`g¡_mes§ge_·r£_”rÜ
+ (
+msg
+, &
+”r
+, &
+debug_šfo
+);
+
+88 
+	`g_´š‹¼
+ ("E¼Ü„eûived fromƒËm’ˆ%s: %s\n", 
+	`GST_OBJECT_NAME
+ (
+msg
+->
+¤c
+), 
+”r
+->
+mes§ge
+);
+
+89 
+	`g_´š‹¼
+ ("Debuggšg infÜm©iÚ: %s\n", 
+debug_šfo
+ ? debug_info : "none");
+
+90 
+	`g_þ—r_”rÜ
+ (&
+”r
+);
+
+91 
+	`g_ä“
+ (
+debug_šfo
+);
+
+92 
+‹rmš©e
+ = 
+TRUE
+;
+
+94 
+GST_MESSAGE_EOS
+:
+
+95 
+	`g_´št
+ ("End-Of-Stream„eached.\n");
+
+96 
+‹rmš©e
+ = 
+TRUE
+;
+
+98 
+GST_MESSAGE_STATE_CHANGED
+:
+
+100 ià(
+	`GST_MESSAGE_SRC
+ (
+msg
+è=ð
+	`GST_OBJECT
+ (
+d©a
+.
+p–še
+)) {
+
+101 
+G¡S‹
+ 
+Þd_¡©e
+, 
+Ãw_¡©e
+, 
+³ndšg_¡©e
+;
+
+102 
+	`g¡_mes§ge_·r£_¡©e_chªged
+ (
+msg
+, &
+Þd_¡©e
+, &
+Ãw_¡©e
+, &
+³ndšg_¡©e
+);
+
+103 
+	`g_´št
+ ("Pipeline state changed from %so %s:\n",
+
+104 
+	`g¡_–em’t_¡©e_g‘_Çme
+ (
+Þd_¡©e
+), g¡_–em’t_¡©e_g‘_Çm(
+Ãw_¡©e
+));
+
+109 
+	`g_´š‹¼
+ ("Unexpected message„eceived.\n");
+
+112 
+	`g¡_mes§ge_uÄef
+ (
+msg
+);
+
+114 } !
+‹rmš©e
+);
+
+116 
+	`g¡_objeù_uÄef
+ (
+bus
+);
+
+117 
+	`g¡_–em’t_£t_¡©e
+ (
+d©a
+.
+p–še
+, 
+GST_STATE_NULL
+);
+
+118 
+	`g¡_objeù_uÄef
+ (
+d©a
+.
+p–še
+);
+
+120 
+	}
+}
+
+123 
+	$·d_added_hªdËr
+ (
+G¡EËm’t
+ *
+¤c
+, 
+G¡Pad
+ *
+Ãw_·d
+, 
+Cu¡omD©a
+ *
+d©a
+)
+
+125 
+	`g_´št
+("Insidehe…ad_added_handler method \n");
+
+126 
+G¡Pad
+ *
+sšk_·d_audio
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+d©a
+->
+audioqueue
+, "sink");
+
+127 
+G¡Pad
+ *
+sšk_·d_video
+ = 
+	`g¡_–em’t_g‘_¡©ic_·d
+ (
+d©a
+->
+videoqueue
+, "sink");
+
+129 
+G¡PadLškR‘uº
+ 
+»t
+;
+
+130 
+G¡C­s
+ *
+Ãw_·d_ÿps
+ = 
+NULL
+;
+
+131 
+G¡SŒuùu»
+ *
+Ãw_·d_¡ruù
+ = 
+NULL
+;
+
+132 cÚ¡ 
+gch¬
+ *
+Ãw_·d_ty³
+ = 
+NULL
+;
+
+133 
+	`g_´št
+ ("Reûived‚ew…ad '%s' from '%s':\n", 
+	`GST_PAD_NAME
+ (
+Ãw_·d
+), 
+	`GST_ELEMENT_NAME
+ (
+¤c
+));
+
+137 
+Ãw_·d_ÿps
+ = 
+	`g¡_·d_g‘_cu¼’t_ÿps
+ (
+Ãw_·d
+);
+
+138 
+Ãw_·d_¡ruù
+ = 
+	`g¡_ÿps_g‘_¡ruùu»
+ (
+Ãw_·d_ÿps
+, 0);
+
+139 
+Ãw_·d_ty³
+ = 
+	`g¡_¡ruùu»_g‘_Çme
+ (
+Ãw_·d_¡ruù
+);
+
+142 ià(
+	`g_¡r_has_´efix
+ (
+Ãw_·d_ty³
+,"audio/x-vorbis" ))
+
+144 
+»t
+ = 
+	`g¡_·d_lšk
+ (
+Ãw_·d
+, 
+sšk_·d_audio
+);
+
+145 ià(
+	`GST_PAD_LINK_FAILED
+ (
+»t
+))
+
+147 
+	`g_´št
+ (" Ty³ i '%s' buˆlšk fažed.\n", 
+Ãw_·d_ty³
+);
+
+151 
+	`g_´št
+ (" Lšk sucûeded (ty³ '%s').\n", 
+Ãw_·d_ty³
+);
+
+154 ià(
+	`g_¡r_has_´efix
+ (
+Ãw_·d_ty³
+, "video/x-theora" ))
+
+156 
+»t
+ = 
+	`g¡_·d_lšk
+ (
+Ãw_·d
+, 
+sšk_·d_video
+);
+
+158 ià(
+	`GST_PAD_LINK_FAILED
+ (
+»t
+))
+
+160 
+	`g_´št
+ (" Ty³ i '%s' buˆlšk fažed.\n", 
+Ãw_·d_ty³
+);
+
+164 
+	`g_´št
+ (" Lšk sucûeded (ty³ '%s').\n", 
+Ãw_·d_ty³
+);
+
+170 
+	`g_´št
+ (" Iˆha ty³ '%s' which i nÙ„aw‡udio. IgnÜšg.\n", 
+Ãw_·d_ty³
+);
+
+171 
+ex™
+;
+
+173 
+ex™
+:
+
+174 ià(
+Ãw_·d_ÿps
+ !ð
+NULL
+)
+
+175 
+	`g¡_ÿps_uÄef
+ (
+Ãw_·d_ÿps
+);
+
+176 
+	`g¡_objeù_uÄef
+ (
+sšk_·d_audio
+);
+
+177 
+	`g¡_objeù_uÄef
+ (
+sšk_·d_video
+);
+
+178 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+1
+14
+video_Audio.c
